@@ -1,0 +1,10 @@
+---
+- name: Setup Vlan
+  hosts: eos
+
+  tasks:
+   - name: Include the variables from the yaml file
+     include_vars: vars/variables.yml
+   - name: include the change_vlan file and set the variables
+     include: tasks/change_vlan_eos.yml
+

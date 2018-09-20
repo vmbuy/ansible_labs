@@ -1,0 +1,13 @@
+---
+
+- name: Display MOTD for Cisco IOS
+  hosts: router
+  connection: network_cli
+  gather_facts: yes
+
+  tasks:
+   - name: display motd and set new motd
+     ios_command:
+      commands:
+        - show banner motd  
+        - banner motd # Warning - new banner #

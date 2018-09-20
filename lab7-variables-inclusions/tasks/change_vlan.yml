@@ -1,0 +1,4 @@
+---
+- name: Adding Vlan "{{vlan_number}}"
+  nxos_vlan:
+    vlan_id: "{{vlan_number}}"

@@ -2,13 +2,13 @@
 localhost
 
 [eos]
-veos-pod-XX.localdomain
+veos-pod-06.localdomain
 
 [nxos]
-n9k-standalone-XX.localdomain
+n9k-standalone-06.localdomain
 
 [router]
-csr1000v-pod-XX.localdomain
+csr1000v-pod-06.localdomain
 
 [junos]
-vsrx-pod-XX.localdomain
+vsrx-pod-06.localdomain

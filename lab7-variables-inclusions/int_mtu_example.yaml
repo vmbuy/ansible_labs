@@ -1,0 +1,16 @@
+---
+- name: change interface desc and  mtu
+  hosts: nxos
+  connection: local
+  gather_facts: yes
+
+  tasks:
+    - nxos_facts:
+    - name: Current MTU setting
+      debug: var=ansible_net_interfaces
+    - name: Change MTU to 9000
+      nxos_interface:
+        name: "{{interface}}"
+        description: "{{description}}"
+        mtu: "{{mtu}}"
+        admin_state: up

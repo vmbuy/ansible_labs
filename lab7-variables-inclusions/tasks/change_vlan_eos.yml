@@ -1,0 +1,4 @@
+---
+- name: Adding Vlan "{{vlan_number}}"
+  eos_vlan:
+    vlan_id: "{{vlan_number}}"

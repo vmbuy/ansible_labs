@@ -13,4 +13,4 @@
     - name: Verify Version is 7.x
       assert:
         that:
-          - "'{{ ansible_net_version }}' is match('^7')"
+          - "'{{ ansible_net_version }}' is match('^6')"

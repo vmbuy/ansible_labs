@@ -1,0 +1,17 @@
+---
+
+- name: create vlan
+  hosts: nxos
+  connection: local
+  gather_facts: yes
+
+  tasks:
+    - name: Create VLAN 2000
+      nxos_interface:
+        name: Ethernet1/1
+        mtu: 9216
+    - nxos_facts:
+    - name: Verify MTU is 9216
+      assert:
+        that:
+          - "'{{ ansible_net_interfaces['Ethernet1/1']['status']['mtu']'}} is match('9216')"

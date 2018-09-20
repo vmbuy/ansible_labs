@@ -1,0 +1,15 @@
+
+---
+
+- name: verify create vlan nxos
+  hosts: nxos
+  connection: network_cli
+  gather_facts: yes
+
+  tasks:
+    - nxos_facts:
+    - debug: var=vlan_list
+    - name: Adding Vlan 2000
+      nxos_vlan:
+       vlan_id: 2000
+

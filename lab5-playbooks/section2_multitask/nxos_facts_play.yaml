@@ -1,0 +1,22 @@
+---
+- name: Include vars from the file
+ include_vars:
+   file: stuff.yaml
+   name: stuff
+
+- name: Gather Nexus Facts
+  hosts: switches
+  connection: httpapi
+  gather_facts: yes
+
+  tasks:
+    - nxos_facts:
+    - name: Get Model
+      debug: var=ansible_net_model
+# 
+  tasks:
+    - nxos_facts:
+    - name: Get Version
+      debug: var=ansible_something_else
+
+
