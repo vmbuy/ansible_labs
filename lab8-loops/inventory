@@ -1,0 +1,14 @@
+[server]
+localhost
+
+[eos]
+veos-pod-06.localdomain
+
+[nxos]
+n9k-standalone-06.localdomain
+
+[router]
+csr1000v-pod-06.localdomain
+
+[junos]
+vsrx-pod-06.localdomain

@@ -1,0 +1,12 @@
+---
+- name: Add multiple vlans
+  hosts: eos
+  tasks:
+    - name: Loop
+      eos_vlan:
+        vlan_id: "{{item}}"
+        state: present
+      loop:
+        - 50
+        - 60
+        - 70
